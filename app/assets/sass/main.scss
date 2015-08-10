@@ -1,0 +1,15 @@
+@import "../../bower_components/normalize-scss/normalize";
+
+@import "mixins/clearfix";
+@import "mixins/box-model";
+@import "mixins/transform";
+@import "mixins/transition";
+
+body {
+	background-color: #efefef;
+}
+
+.content-spacer {
+	width: 100%;
+	height: 400px;
+}

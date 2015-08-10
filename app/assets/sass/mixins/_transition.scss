@@ -1,0 +1,35 @@
+@mixin grid-transition(
+    $property,
+    $prefix-property                : false,
+    $duration                       : 1s,
+    $timing-function                : linear,
+    $delay                          : null
+) {
+
+    @if $property != 'opacity' {
+        @if $property != 'transform' {
+            @warn "You are applying a transition to #{$property} - Is it possible to optimise this transition by using opacity or transform instead?";
+        }
+    }
+
+    @if $property != 'transform' {
+        @if $property != 'opacity' {
+            @warn "You are applying a transition to #{$property} - Is it possible to optimise this transition by using opacity or transform instead?";
+        }
+    }
+
+    @if $prefix-property {
+        -o-transition               : -o-#{$property} $duration $timing-function $delay;
+        -ms-transition              : -ms-#{$property} $duration $timing-function $delay;
+        -moz-transition             : -moz-#{$property} $duration $timing-function $delay;
+        -webkit-transition          : -webkit-#{$property} $duration $timing-function $delay;
+        transition                  : $property $duration $timing-function $delay;
+    } @else {
+        -o-transition               : $property $duration $timing-function $delay;
+        -ms-transition              : $property $duration $timing-function $delay;
+        -moz-transition             : $property $duration $timing-function $delay;
+        -webkit-transition          : $property $duration $timing-function $delay;
+        transition                  : $property $duration $timing-function $delay;
+
+    }
+}

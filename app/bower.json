@@ -1,0 +1,13 @@
+{
+  "name": "Grid",
+  "version": "0.0.0",
+  "authors": [
+    "Steve Farrugia <sfarrugia@gmail.com>"
+  ],
+  "description": "Grid template",
+  "main": "./assets/css/main.css",
+  "license": "MIT",
+  "devDependencies": {
+    "normalize-scss": "~3.0.3"
+  }
+}
