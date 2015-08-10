@@ -1,0 +1,91 @@
+@mixin grid(
+	$column-class: '.column',
+	$container-max: 100%,
+	$grid-columns: 12,
+	$column-spans: ( 0: 12, 600: 10 2, 800: 8 4, 1200: 6 4 2 )
+){
+	$single-column-span: 100% / $grid-columns;
+	$previous-bp: 0;
+
+	width: 100%;
+	max-width: $container-max;
+	@include grid-clearfix();
+
+	#{$column-class} {
+		display: none;
+		width: $single-column-span;
+		float: left;
+	}
+
+	@each $breakpoint, $columns in $column-spans {
+
+		$amount-defined: count-list($columns);
+		$column-sum: list-sum($columns);
+		$index: 1;
+		$sumProgress: 0;
+
+		@if $breakpoint < 1 {
+
+			@each $column in $columns {
+
+				$sumProgress: $sumProgress + $column;
+				@if $sumProgress <= $grid-columns {
+					#{$column-class}:nth-child(#{$index}) {
+						display: block;
+						width: $single-column-span * $column;
+					}
+				}
+				$index: $index + 1;
+			}
+
+		} @else {
+
+			@media ( min-width: $breakpoint ) {
+
+				@each $column in $columns {
+
+					$sumProgress: $sumProgress + $column;
+					@if $sumProgress <= $grid-columns {
+
+						@if type-of( map-get($column-spans, $previous-bp) ) == list {
+							@if $index <= length( map-get($column-spans, $previous-bp) ) {
+								@if nth( map-get($column-spans, $previous-bp), $index ) != $column {
+									#{$column-class}:nth-child(#{$index}) {
+										display: block;
+										width: $single-column-span * $column;
+									}
+								}
+							} @else {
+								#{$column-class}:nth-child(#{$index}) {
+									display: block;
+									width: $single-column-span * $column;
+								}
+							}
+						} @else {
+							@if $index <= 1 {
+								@if map-get($column-spans, $previous-bp) != $column {
+									#{$column-class}:nth-child(#{$index}) {
+										display: block;
+										width: $single-column-span * $column;
+									}
+								}
+							} @else {
+								#{$column-class}:nth-child(#{$index}) {
+									display: block;
+									width: $single-column-span * $column;
+								}
+
+							}
+						}
+						
+					}
+					$index: $index + 1;
+				}
+
+			}
+
+		}
+
+		$previous-bp: $breakpoint;
+	}
+}

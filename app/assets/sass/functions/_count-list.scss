@@ -1,0 +1,4 @@
+@function count-list($list){
+
+	@return length($list);
+}
