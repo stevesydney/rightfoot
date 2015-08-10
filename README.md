@@ -6,6 +6,8 @@ A css starter file.
 
 Current experimental grid system allows you to implement a grid layout via @mixin.
 
+There are some initial checks to reduce code duplication across breakpoints. This is an ongoing effort.
+
 The @mixin takes 4 arguments
 
 1. Column class: This is the `.classname` of the column elements within the container element.
