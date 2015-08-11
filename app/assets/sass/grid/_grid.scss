@@ -1,3 +1,6 @@
+// TODO
+// Clear left can remain if same column span remains the same between media queries with different column spans preceeding it.
+
 @mixin grid(
 	$column-class: '.column',
 	$container-max: 100%,
@@ -12,6 +15,7 @@
 	@include grid-clearfix();
 
 	#{$column-class} {
+		clear: none;
 		display: none;
 		width: $single-column-span;
 		float: left;
@@ -23,16 +27,37 @@
 		$column-sum: list-sum($columns);
 		$index: 1;
 		$sumProgress: 0;
+		$rowCount: 1;
+		$rowSum: 0;
 
 		@if $breakpoint < 1 {
 
 			@each $column in $columns {
 
 				$sumProgress: $sumProgress + $column;
-				@if $sumProgress <= $grid-columns {
+				$rowSum: $rowSum + $column;
+
+				@if $rowSum <= $grid-columns {
 					#{$column-class}:nth-child(#{$index}) {
+						clear: none;
 						display: block;
 						width: $single-column-span * $column;
+					}
+				} @else if ($column) {
+					#{$column-class}:nth-child(#{$index}) {
+						@if ( $rowSum - $column ) <= $grid-columns {
+							$rowSum: $column;
+							clear: left;
+						} @else {
+							clear: none;
+						}
+						display: block;
+						width: $single-column-span * $column;
+					}
+				} @else {
+					#{$column-class}:nth-child(#{$index}) {
+						clear: none;
+						display: none;
 					}
 				}
 				$index: $index + 1;
@@ -45,19 +70,23 @@
 				@each $column in $columns {
 
 					$sumProgress: $sumProgress + $column;
-					@if $sumProgress <= $grid-columns {
+					$rowSum: $rowSum + $column;
+
+					@if $rowSum <= $grid-columns {
 
 						@if type-of( map-get($column-spans, $previous-bp) ) == list {
 							@if $index <= length( map-get($column-spans, $previous-bp) ) {
 								@if nth( map-get($column-spans, $previous-bp), $index ) != $column {
 									#{$column-class}:nth-child(#{$index}) {
 										display: block;
+										clear: none;
 										width: $single-column-span * $column;
 									}
 								}
 							} @else {
 								#{$column-class}:nth-child(#{$index}) {
 									display: block;
+									clear: none;
 									width: $single-column-span * $column;
 								}
 							}
@@ -66,19 +95,40 @@
 								@if map-get($column-spans, $previous-bp) != $column {
 									#{$column-class}:nth-child(#{$index}) {
 										display: block;
+										clear: none;
 										width: $single-column-span * $column;
 									}
 								}
 							} @else {
 								#{$column-class}:nth-child(#{$index}) {
 									display: block;
+									clear: none;
 									width: $single-column-span * $column;
 								}
 
 							}
 						}
 						
+					} @else if ($column) {
+
+						#{$column-class}:nth-child(#{$index}) {
+							@if ( $rowSum - $column ) <= $grid-columns {
+								$rowSum: $column;
+								clear: left;
+							} @else {
+								clear: none;
+							}
+							display: block;
+							width: $single-column-span * $column;
+						}
+					} @else {
+						#{$column-class}:nth-child(#{$index}) {
+							clear: none;
+							display: none;
+						}
 					}
+
+
 					$index: $index + 1;
 				}
 

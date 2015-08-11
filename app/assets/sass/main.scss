@@ -15,24 +15,70 @@ body {
 	background-color: #efefef;
 }
 
+.content-spacer {
+
+	h1 {
+		text-align: center;
+		color: #fff;
+		margin: 0;
+		line-height: 100px;
+	}
+
+	&.type-1 {
+		border: 4px solid darkgreen;
+		background-color: green;
+		height: 100px;
+	}
+	&.type-2 {
+		border: 4px solid darkred;
+		background-color: red;
+		height: 200px;
+	}
+	&.type-3 {
+		border: 4px solid rebeccapurple;
+		background-color: purple;
+		height: 300px;
+	}
+	&.type-4 {
+		border: 4px solid midnightblue;
+		background-color: navy;
+		height: 400px;
+	}
+}
+
 .grid-a {
 	@include grid(
 		'.column',
 		100%,
 		12,
 		(
-			0px		: 12,
-			500px	: 6 6,
-			600px	: 4 4 4,
-			700px	: 3 3 3 3,
-			800px	: 3 3 2 2 2,
-			900px	: 2 2 2 2 2 2,
-			1000px	: 2 2 2 2 2 1 1,
-			1200px	: 2 2 2 2 1 1 1 1,
-			1300px	: 2 2 2 1 1 1 1 1 1,
-			1400px	: 2 2 1 1 1 1 1 1 1 1,
-			1500px	: 2 1 1 1 1 1 1 1 1 1 1,
-			1600px	: 1 1 1 1 1 1 1 1 1 1 1 1,
+			0px		: 3 3 3 3 3 3 3 3 3 3 3 3,
+			600px	: 4 4 4 4 4 4 4 4 4 4 4 4,
+			800px	: 8 4 8 4 8 4 8 4 8 4 8 4,
+			1200px	: 6 2 2 2 6 2 2 2 6 2 2 2,
+			1600px	: 4 3 2 1 2 4 3 2 1 2 6 6,
 		)
 	);
 }
+
+// .grid-a {
+// 	@include grid(
+// 		'.column',
+// 		100%,
+// 		12,
+// 		(
+// 			0px		: 3 3 3 3 3 3 3 3 3 3 3 3,
+// 			500px	: 6 6 6 6 6 6 6 6 6 6 6 6,
+// 			600px	: 3 3 3 3 3 3 3 3 3 3 3 3,
+// 			700px	: 6 6 6 6 6 6 6 6 6 6 6 6,
+// 			800px	: 3 3 3 3 3 3 3 3 3 3 3 3,
+// 			900px	: 6 6 6 6 6 6 6 6 6 6 6 6,
+// 			1000px	: 3 3 3 3 3 3 3 3 3 3 3 3,
+// 			1200px	: 6 6 6 6 6 6 6 6 6 6 6 6,
+// 			1300px	: 3 3 3 3 3 3 3 3 3 3 3 3,
+// 			1400px	: 6 6 6 6 6 6 6 6 6 6 6 6,
+// 			1500px	: 3 3 3 3 3 3 3 3 3 3 3 3,
+// 			1600px	: 6 6 6 6 6 6 6 6 6 6 6 6,
+// 		)
+// 	);
+// }
