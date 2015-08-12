@@ -1,16 +1,16 @@
-web:
+gridweb:
     image: stevesydney/nginx-dev
     links:
-        - php
+        - gridphp
     ports:
         - 80:80
     volumes:
         - ../../grid:/var/www/html
     environment:
-        PHP_FPM: php:9000
+        PHP_FPM: gridphp:9000
         DOCUMENT_ROOT: /var/www/html/app
         SERVER_NAME: grid.dev www.grid.dev
-php:
+gridphp:
     image: stevesydney/php-dev
     volumes:
         - ../../grid:/var/www/html
