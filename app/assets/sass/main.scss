@@ -24,25 +24,8 @@ body {
 		line-height: 100px;
 	}
 
-	&.type-1 {
-		border: 4px solid darkgreen;
-		background-color: green;
-		height: 100px;
-	}
-	&.type-2 {
-		border: 4px solid darkred;
-		background-color: red;
-		height: 200px;
-	}
-	&.type-3 {
-		border: 4px solid rebeccapurple;
-		background-color: purple;
-		height: 300px;
-	}
-	&.type-4 {
-		border: 4px solid midnightblue;
-		background-color: navy;
-		height: 400px;
+	&.square {
+		height: 100%;
 	}
 }
 

@@ -376,25 +376,8 @@ body {
   margin: 0;
   line-height: 100px; }
 
-.content-spacer.type-1 {
-  border: 4px solid darkgreen;
-  background-color: green;
-  height: 100px; }
-
-.content-spacer.type-2 {
-  border: 4px solid darkred;
-  background-color: red;
-  height: 200px; }
-
-.content-spacer.type-3 {
-  border: 4px solid rebeccapurple;
-  background-color: purple;
-  height: 300px; }
-
-.content-spacer.type-4 {
-  border: 4px solid midnightblue;
-  background-color: navy;
-  height: 400px; }
+.content-spacer.square {
+  height: 100%; }
 
 .grid-a {
   width: 100%;
@@ -414,207 +397,360 @@ body {
     clear: none;
     display: block;
     width: 25%; }
+    .grid-a .column:nth-child(1).square {
+      height: 25vw;
+      max-height: 100vh; }
   .grid-a .column:nth-child(2) {
     clear: none;
     display: block;
     width: 25%; }
+    .grid-a .column:nth-child(2).square {
+      height: 25vw;
+      max-height: 100vh; }
   .grid-a .column:nth-child(3) {
     clear: none;
     display: block;
     width: 25%; }
+    .grid-a .column:nth-child(3).square {
+      height: 25vw;
+      max-height: 100vh; }
   .grid-a .column:nth-child(4) {
     clear: none;
     display: block;
     width: 25%; }
+    .grid-a .column:nth-child(4).square {
+      height: 25vw;
+      max-height: 100vh; }
   .grid-a .column:nth-child(5) {
     clear: left;
     display: block;
     width: 25%; }
+    .grid-a .column:nth-child(5).square {
+      height: 25vw;
+      max-height: 100vh; }
   .grid-a .column:nth-child(6) {
     clear: none;
     display: block;
     width: 25%; }
+    .grid-a .column:nth-child(6).square {
+      height: 25vw;
+      max-height: 100vh; }
   .grid-a .column:nth-child(7) {
     clear: none;
     display: block;
     width: 25%; }
+    .grid-a .column:nth-child(7).square {
+      height: 25vw;
+      max-height: 100vh; }
   .grid-a .column:nth-child(8) {
     clear: none;
     display: block;
     width: 25%; }
+    .grid-a .column:nth-child(8).square {
+      height: 25vw;
+      max-height: 100vh; }
   .grid-a .column:nth-child(9) {
     clear: left;
     display: block;
     width: 25%; }
+    .grid-a .column:nth-child(9).square {
+      height: 25vw;
+      max-height: 100vh; }
   .grid-a .column:nth-child(10) {
     clear: none;
     display: block;
     width: 25%; }
+    .grid-a .column:nth-child(10).square {
+      height: 25vw;
+      max-height: 100vh; }
   .grid-a .column:nth-child(11) {
     clear: none;
     display: block;
     width: 25%; }
+    .grid-a .column:nth-child(11).square {
+      height: 25vw;
+      max-height: 100vh; }
   .grid-a .column:nth-child(12) {
     clear: none;
     display: block;
     width: 25%; }
+    .grid-a .column:nth-child(12).square {
+      height: 25vw;
+      max-height: 100vh; }
   @media (min-width: 600px) {
     .grid-a .column:nth-child(1) {
       display: block;
       clear: none;
       width: 33.33333%; }
+      .grid-a .column:nth-child(1).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(2) {
       display: block;
       clear: none;
       width: 33.33333%; }
+      .grid-a .column:nth-child(2).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(3) {
       display: block;
       clear: none;
       width: 33.33333%; }
+      .grid-a .column:nth-child(3).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(4) {
       clear: left;
       display: block;
       width: 33.33333%; }
+      .grid-a .column:nth-child(4).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(5) {
       display: block;
       clear: none;
       width: 33.33333%; }
+      .grid-a .column:nth-child(5).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(6) {
       display: block;
       clear: none;
       width: 33.33333%; }
+      .grid-a .column:nth-child(6).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(7) {
       clear: left;
       display: block;
       width: 33.33333%; }
+      .grid-a .column:nth-child(7).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(8) {
       display: block;
       clear: none;
       width: 33.33333%; }
+      .grid-a .column:nth-child(8).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(9) {
       display: block;
       clear: none;
       width: 33.33333%; }
+      .grid-a .column:nth-child(9).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(10) {
       clear: left;
       display: block;
       width: 33.33333%; }
+      .grid-a .column:nth-child(10).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(11) {
       display: block;
       clear: none;
       width: 33.33333%; }
+      .grid-a .column:nth-child(11).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(12) {
       display: block;
       clear: none;
-      width: 33.33333%; } }
+      width: 33.33333%; }
+      .grid-a .column:nth-child(12).square {
+        height: 33.33333vw;
+        max-height: 100vh; } }
   @media (min-width: 800px) {
     .grid-a .column:nth-child(1) {
       display: block;
       clear: none;
       width: 66.66667%; }
+      .grid-a .column:nth-child(1).square {
+        height: 66.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(3) {
       clear: left;
       display: block;
       width: 66.66667%; }
+      .grid-a .column:nth-child(3).square {
+        height: 66.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(5) {
       clear: left;
       display: block;
       width: 66.66667%; }
+      .grid-a .column:nth-child(5).square {
+        height: 66.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(7) {
       clear: left;
       display: block;
       width: 66.66667%; }
+      .grid-a .column:nth-child(7).square {
+        height: 66.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(9) {
       clear: left;
       display: block;
       width: 66.66667%; }
+      .grid-a .column:nth-child(9).square {
+        height: 66.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(11) {
       clear: left;
       display: block;
-      width: 66.66667%; } }
+      width: 66.66667%; }
+      .grid-a .column:nth-child(11).square {
+        height: 66.66667vw;
+        max-height: 100vh; } }
   @media (min-width: 1200px) {
     .grid-a .column:nth-child(1) {
       display: block;
       clear: none;
       width: 50%; }
+      .grid-a .column:nth-child(1).square {
+        height: 50vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(2) {
       display: block;
       clear: none;
       width: 16.66667%; }
+      .grid-a .column:nth-child(2).square {
+        height: 16.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(3) {
       display: block;
       clear: none;
       width: 16.66667%; }
+      .grid-a .column:nth-child(3).square {
+        height: 16.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(4) {
       display: block;
       clear: none;
       width: 16.66667%; }
+      .grid-a .column:nth-child(4).square {
+        height: 16.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(5) {
       clear: left;
       display: block;
       width: 50%; }
+      .grid-a .column:nth-child(5).square {
+        height: 50vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(6) {
       display: block;
       clear: none;
       width: 16.66667%; }
+      .grid-a .column:nth-child(6).square {
+        height: 16.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(7) {
       display: block;
       clear: none;
       width: 16.66667%; }
+      .grid-a .column:nth-child(7).square {
+        height: 16.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(8) {
       display: block;
       clear: none;
       width: 16.66667%; }
+      .grid-a .column:nth-child(8).square {
+        height: 16.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(9) {
       clear: left;
       display: block;
       width: 50%; }
+      .grid-a .column:nth-child(9).square {
+        height: 50vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(10) {
       display: block;
       clear: none;
       width: 16.66667%; }
+      .grid-a .column:nth-child(10).square {
+        height: 16.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(11) {
       display: block;
       clear: none;
       width: 16.66667%; }
+      .grid-a .column:nth-child(11).square {
+        height: 16.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(12) {
       display: block;
       clear: none;
-      width: 16.66667%; } }
+      width: 16.66667%; }
+      .grid-a .column:nth-child(12).square {
+        height: 16.66667vw;
+        max-height: 100vh; } }
   @media (min-width: 1600px) {
     .grid-a .column:nth-child(1) {
       display: block;
       clear: none;
       width: 33.33333%; }
+      .grid-a .column:nth-child(1).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(2) {
       display: block;
       clear: none;
       width: 25%; }
+      .grid-a .column:nth-child(2).square {
+        height: 25vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(4) {
       display: block;
       clear: none;
       width: 8.33333%; }
+      .grid-a .column:nth-child(4).square {
+        height: 8.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(5) {
       display: block;
       clear: none;
       width: 16.66667%; }
+      .grid-a .column:nth-child(5).square {
+        height: 16.66667vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(6) {
       clear: left;
       display: block;
       width: 33.33333%; }
+      .grid-a .column:nth-child(6).square {
+        height: 33.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(7) {
       display: block;
       clear: none;
       width: 25%; }
+      .grid-a .column:nth-child(7).square {
+        height: 25vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(9) {
       display: block;
       clear: none;
       width: 8.33333%; }
+      .grid-a .column:nth-child(9).square {
+        height: 8.33333vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(11) {
       clear: left;
       display: block;
       width: 50%; }
+      .grid-a .column:nth-child(11).square {
+        height: 50vw;
+        max-height: 100vh; }
     .grid-a .column:nth-child(12) {
       display: block;
       clear: none;
-      width: 50%; } }
+      width: 50%; }
+      .grid-a .column:nth-child(12).square {
+        height: 50vw;
+        max-height: 100vh; } }

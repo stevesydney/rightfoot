@@ -15,73 +15,73 @@
 
 <div class="grid-a">
 
-	<div class="column">
+	<div class="column square">
 
 		<?php include "temporary/_content-spacer.php"; ?>
 
 	</div>
 
-	<div class="column">
+	<div class="column square">
 
 		<?php $number++; include "temporary/_content-spacer.php"; ?>
 
 	</div>
 
-	<div class="column">
+	<div class="column square">
 
 		<?php $number++; include "temporary/_content-spacer.php"; ?>
 
 	</div>
 
-	<div class="column">
+	<div class="column square">
 
 		<?php $number++; include "temporary/_content-spacer.php"; ?>
 
 	</div>
 
-	<div class="column">
+	<div class="column square">
 
 		<?php $number++; include "temporary/_content-spacer.php"; ?>
 
 	</div>
 
-	<div class="column">
+	<div class="column square">
 
 		<?php $number++; include "temporary/_content-spacer.php"; ?>
 
 	</div>
 
-	<div class="column">
+	<div class="column square">
 
 		<?php $number++; include "temporary/_content-spacer.php"; ?>
 
 	</div>
 
-	<div class="column">
+	<div class="column square">
 
 		<?php $number++; include "temporary/_content-spacer.php"; ?>
 
 	</div>
 
-	<div class="column">
+	<div class="column square">
 
 		<?php $number++; include "temporary/_content-spacer.php"; ?>
 
 	</div>
 
-	<div class="column">
+	<div class="column square">
 
 		<?php $number++; include "temporary/_content-spacer.php"; ?>
 
 	</div>
 
-	<div class="column">
+	<div class="column square">
 
 		<?php $number++; include "temporary/_content-spacer.php"; ?>
 
 	</div>
 
-	<div class="column">
+	<div class="column square">
 
 		<?php $number++; include "temporary/_content-spacer.php"; ?>
 
